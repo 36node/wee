@@ -15,7 +15,8 @@ export class Service extends API {
    * @returns {GetSignatureResponse} A valid signature
    */
   async getSignature(req) {
-    const body = await wx.jssdk.getSignature("http://ug.navinfo.com/events/ug");
+    const { url } = req;
+    const body = await wx.jssdk.getSignature(decodeURIComponent(url));
     return { body };
   }
 }

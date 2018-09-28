@@ -58,3 +58,6 @@ tmp
 .try*
 .playground
 snapshot
+
+# wechat
+wechat-info.json
