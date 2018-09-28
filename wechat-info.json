@@ -1,0 +1,24 @@
+{
+  "globalToken": {
+    "count": 1,
+    "modifyDate": "2018-09-28T07:06:27.267Z",
+    "accessToken": "14_nnk2zPNbCc3mqh5xj5PQ1Ae6n-rV1VA4yIgnxwpHyfg3_Ot6PNcDNJErlZBzgPNOrSfHMW34Sfo6qL1B6ypvINI_7nzvpbl01MkKvRRhTrCWjKKKwq6N49d6Wxf9oLhfZFsT3kpP0uUzWZdDFFUeAGALLA",
+    "jsapi_ticket": "HoagFKDcsGMVCIY2vOjf9i8uUZ_Qvea3DPL7XModBIUl0q7MRZrYcPw9PmqyuN2OcXpZFia8Rq2x7yTbQvl-Hg"
+  },
+  "urls": {
+    "http://ug.navinfo.com/events/ug": {
+      "jsapi_ticket": "HoagFKDcsGMVCIY2vOjf9i8uUZ_Qvea3DPL7XModBIUl0q7MRZrYcPw9PmqyuN2OcXpZFia8Rq2x7yTbQvl-Hg",
+      "nonceStr": "cdze43uvax6",
+      "timestamp": "1538118424",
+      "url": "http://ug.navinfo.com/events/ug",
+      "signature": "94d941524f212236eae725c0bdaa7af8ae4eabe4",
+      "accessToken": "14_nnk2zPNbCc3mqh5xj5PQ1Ae6n-rV1VA4yIgnxwpHyfg3_Ot6PNcDNJErlZBzgPNOrSfHMW34Sfo6qL1B6ypvINI_7nzvpbl01MkKvRRhTrCWjKKKwq6N49d6Wxf9oLhfZFsT3kpP0uUzWZdDFFUeAGALLA",
+      "signatureName": "http://ug.navinfo.com/events/ug",
+      "createDate": "2018-09-28T07:07:04.740Z",
+      "modifyDate": "2018-09-28T07:07:04.740Z",
+      "updated": true
+    }
+  },
+  "oauth": {},
+  "card": {}
+}

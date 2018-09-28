@@ -1,0 +1,100 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: Connect to Wechat Server
+  license:
+    name: MIT
+servers:
+  - url: https://api.36node.com/wee/v0
+paths:
+  /signatures/{url}:
+    get:
+      summary: Get a signature
+      operationId: getSignature
+      tags:
+        - signature
+      parameters:
+        - name: url
+          in: path
+          required: true
+          description: The url which page will use this signature
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A valid signature
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Signature"
+              examples:
+                default:
+                  value: |
+                    {
+                      appId: "xxxxxx",
+                      timestamp: 1414587457,
+                      nonceStr: 'Wm3WZYTPz0wzccnW',
+                      content: "0f9de62fce790f9a083d5c99e95740ceb90c27ed"
+                    }
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalError'
+
+security:
+  - bearerAuth: []
+
+components:
+  responses:
+    NoContent:
+      description: The resource was deleted successfully.
+    NotFound:
+      description: The specified resource was not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Err'
+    Unauthorized:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Err'
+    InternalError:
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Err"
+  schemas:
+    Signature:
+      required:
+        - appId
+        - timestamp
+        - nonceStr
+        - content
+      properties:
+        appId:
+          type: string
+        timestamp:
+          type: string
+        nonceStr:
+          type: string
+        content:
+          type: string
+    Err:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+      required:
+        - code
+        - message
+
+  securitySchemes:
+    bearerAuth:            # arbitrary name for the security scheme
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
